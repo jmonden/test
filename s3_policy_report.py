@@ -1,11 +1,12 @@
 import boto3
+import sys
+
 
 s3 = boto3.resource('s3',
-         aws_access_key_id='AKIAJEZIELFAW45OGCNA',
-         aws_secret_access_key='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')
+         aws_access_key_id=sys.argv[1],
+         aws_secret_access_key=sys.argv[2])
 
 for bucket in s3.buckets.all():
-    # print(bucket.name)
     bucketTest = ""
     acl = bucket.Acl()
     for grant in acl.grants:
