@@ -14,4 +14,4 @@ RUN pip install boto3
 
 COPY s3_policy_report.py /app/s3_policy_report.py
 
-RUN tail-f /var/log/lastlog
+RUN tail -f /var/log/lastlog
