@@ -12,4 +12,3 @@ RUN python3 get-pip.py
 RUN pip install awscli
 RUN pip install boto3
 
-CMD [“tail”, “-f /var/log/lastlog”]
